@@ -1,0 +1,692 @@
+<!-- =========================================================
+     PART 1 / 10 — BASE DOCUMENT + HEAD + GLOBAL BACKGROUND
+========================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aniket Biradar | Backend Developer</title>
+  <meta name="description"
+        content="Aniket Biradar — Backend-focused developer building production-grade systems using Python, Java, and databases." />
+
+  <!-- ================= GOOGLE FONTS ================= -->
+  <!-- Codefather-inspired mono + modern sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ================= DEV ICONS ================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+  />
+
+  <!-- ================= MAIN STYLES ================= -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- =========================================================
+     GLOBAL BACKGROUND SYSTEMS (NON-INTERACTIVE)
+     - Floating symbols (keep from existing)
+     - Vertical grid lines (Codefather-inspired)
+     - Cursor glow (subtle)
+========================================================= -->
+
+<!-- Soft gradient glow -->
+<div class="background-layer" aria-hidden="true"></div>
+
+<!-- Vertical grid lines -->
+<div class="vertical-lines" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- Floating code symbols -->
+<div class="code-particles" aria-hidden="true"></div>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" aria-hidden="true"></div>
+<!-- =========================================================
+     PART 2 / 10 — HEADER / NAVIGATION / THEME TOGGLE
+========================================================= -->
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">Aniket</span>
+    </div>
+
+    <!-- PRIMARY NAV -->
+    <nav class="primary-nav" aria-label="Primary Navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#tech" class="nav-link">Tech</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- THEME TOGGLE (AYUSH-STYLE PENDULUM) -->
+    <!-- JS will animate + persist theme -->
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      aria-label="Toggle dark and light theme"
+      title="Toggle theme"
+    >
+      <div class="toggle-track">
+        <div class="toggle-ball">
+          <span class="icon sun">☀</span>
+          <span class="icon moon">🌙</span>
+        </div>
+      </div>
+    </button>
+
+  </div>
+</header>
+<!-- =========================================================
+     PART 3 / 10 — HERO SECTION (AYUSH-INSPIRED + TERMINAL)
+========================================================= -->
+
+<main>
+
+<section id="home" class="hero">
+
+  <!-- ================= LEFT CONTENT ================= -->
+  <div class="hero-left">
+
+    <h1 class="hero-title">
+      Backend Developer<br />
+      <span class="accent">who builds systems, not demos</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Python · Java · Databases · Automation · System Design
+    </p>
+
+    <p class="hero-description">
+      I design and implement production-oriented backend systems,
+      automation pipelines, and desktop applications with
+      clean architecture, scalability, and reliability in mind.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    </div>
+
+  </div>
+
+  <!-- ================= RIGHT TERMINAL ================= -->
+  <div class="hero-right">
+
+    <div class="hero-terminal" role="region" aria-label="Interactive terminal">
+
+      <pre id="terminal-output"></pre>
+
+      <div class="terminal-input-line">
+        <span class="prompt">$</span>
+        <input
+          id="terminal-input"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="type 'help' and press enter"
+          aria-label="Terminal input"
+        />
+      </div>
+
+      <div id="terminal-suggestions"></div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     PART 4 / 10 — ABOUT SECTION (ENHANCED, NON-GENERIC)
+========================================================= -->
+
+<section id="about" class="about">
+
+  <div class="container">
+
+    <header class="section-header">
+      <h2>About Me</h2>
+      <p class="section-subtitle">
+        I focus on how systems behave in the real world — not just how they look.
+      </p>
+    </header>
+
+    <div class="about-layout">
+
+      <!-- LEFT: STORY -->
+      <div class="about-story">
+        <p>
+          I am a B.Sc. Computer Science student with a strong inclination toward
+          backend engineering and system design. I enjoy working close to data,
+          infrastructure, and execution flow — where correctness, performance,
+          and maintainability matter.
+        </p>
+
+        <p>
+          My projects reflect real-world constraints: dynamic data sources,
+          transactional workflows, offline reliability, and structured storage.
+          I deliberately design systems using clean architecture, MVC patterns,
+          and well-defined responsibilities instead of tightly coupled logic.
+        </p>
+
+        <p>
+          I am actively preparing for backend development roles and internships,
+          with a long-term goal of building scalable, production-grade software
+          systems.
+        </p>
+      </div>
+
+      <!-- RIGHT: HIGHLIGHTS -->
+      <div class="about-highlights">
+
+        <div class="highlight-card">
+          <h3>Backend First</h3>
+          <p>
+            Python, Java, databases, APIs, automation, and system workflows —
+            UI is secondary to correctness.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Architecture Mindset</h3>
+          <p>
+            MVC, separation of concerns, reusable modules, and maintainable
+            codebases.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Production Thinking</h3>
+          <p>
+            Error handling, logging, retries, validation, and data integrity
+            are first-class concerns.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     PART 5 / 10 — RESUME SECTION (PRESERVED + CLEAN)
+========================================================= -->
+
+<section id="resume" class="resume">
+
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Resume</h2>
+      <p class="section-subtitle">
+        Education, focus areas, and academic milestones.
+      </p>
+    </header>
+
+    <div class="resume-timeline">
+
+      <div class="timeline-item">
+        <span class="time">2023 – 2027</span>
+        <h3>B.Sc. Computer Science</h3>
+        <p>
+          COCSIT, Latur<br />
+          Current CGPA: <strong>9.55 / 10.0</strong>
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="time">Primary Focus</span>
+        <h3>Backend Engineering</h3>
+        <p>
+          Python, Java, databases, automation pipelines,
+          MVC architecture, and system-level thinking.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="time">Research & Presentation</span>
+        <h3>Aavishkar 2025</h3>
+        <p>
+          Presented a technical poster explaining system design,
+          implementation approach, and real-world constraints.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="resume-action">
+      <a
+        href="assets/resume.pdf"
+        target="_blank"
+        class="resume-download"
+      >
+        Download Resume
+      </a>
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     PART 6 / 10 — TECH STACK (STRUCTURE FIRST)
+========================================================= -->
+
+<section id="tech" class="tech">
+
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Tech Stack</h2>
+      <p class="section-subtitle">
+        Tools and technologies I use to design backend systems.
+      </p>
+    </header>
+
+    <div class="tech-groups">
+
+      <!-- ================= LANGUAGES ================= -->
+      <div class="tech-group">
+        <h3 class="tech-group-title">Programming Languages</h3>
+
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="devicon-python-plain"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-java-plain"></i>
+            <span>Java</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-javascript-plain"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-cplusplus-plain"></i>
+            <span>C++</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-c-plain"></i>
+            <span>C</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BACKEND & DATABASES ================= -->
+      <div class="tech-group">
+        <h3 class="tech-group-title">Backend & Databases</h3>
+
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="devicon-django-plain"></i>
+            <span>Django</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-flask-original"></i>
+            <span>Flask</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-mysql-plain"></i>
+            <span>MySQL</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-mongodb-plain"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-sqlite-plain"></i>
+            <span>SQLite</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= TOOLS & CONCEPTS ================= -->
+      <div class="tech-group">
+        <h3 class="tech-group-title">Tools & Concepts</h3>
+
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="devicon-git-plain"></i>
+            <span>Git</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-linux-plain"></i>
+            <span>Linux</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-apache-plain"></i>
+            <span>Tomcat</span>
+          </div>
+          <div class="tech-item">
+            <i class="devicon-visualstudio-plain"></i>
+            <span>VS Code</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     PART 7 / 10 — PROJECTS SECTION (HIGH IMPACT)
+========================================================= -->
+
+<section id="projects" class="projects">
+
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Projects</h2>
+      <p class="section-subtitle">
+        Production-oriented systems, not tutorial-level demos.
+      </p>
+    </header>
+
+    <div class="project-grid">
+
+      <!-- ================= IMAGE SCRAPER ================= -->
+      <article class="project-card" data-project="scraper">
+        <div class="project-media">
+          <img
+            src="assets/projects/image_scrapper_code1.png"
+            alt="Image Scraper project preview"
+          />
+        </div>
+
+        <div class="project-content">
+          <h3>Image Scraper & Dataset Generator</h3>
+
+          <p class="project-description">
+            Automated image collection system for dynamic websites with
+            pagination handling, retries, and deduplication.
+          </p>
+
+          <ul class="project-tags">
+            <li>Python</li>
+            <li>Selenium</li>
+            <li>MongoDB</li>
+            <li>Automation</li>
+          </ul>
+
+          <div class="project-actions">
+            <a
+              href="https://github.com/aniketbiradar-official/image-scraper-python"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              GitHub
+            </a>
+
+            <button
+              class="btn btn-primary"
+              data-project-btn="scraper"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= LIBRARY MANAGEMENT ================= -->
+      <article class="project-card" data-project="library">
+        <div class="project-media">
+          <img
+            src="assets/projects/library_admin.png"
+            alt="Library Management System preview"
+          />
+        </div>
+
+        <div class="project-content">
+          <h3>Library Management System</h3>
+
+          <p class="project-description">
+            Full-stack Java MVC application with role-based access,
+            transactional workflows, and reporting.
+          </p>
+
+          <ul class="project-tags">
+            <li>Java</li>
+            <li>JSP</li>
+            <li>Servlets</li>
+            <li>MySQL</li>
+          </ul>
+
+          <div class="project-actions">
+            <a
+              href="https://github.com/aniketbiradar-official/library-management-system"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              GitHub
+            </a>
+
+            <button
+              class="btn btn-primary"
+              data-project-btn="library"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= EXPENSE TRACKER ================= -->
+      <article class="project-card" data-project="expense">
+        <div class="project-media">
+          <img
+            src="assets/projects/expense_tracker_code1.png"
+            alt="Expense Tracker desktop application"
+          />
+        </div>
+
+        <div class="project-content">
+          <h3>Personal Expense Tracker</h3>
+
+          <p class="project-description">
+            Offline-first desktop application for expense tracking,
+            budgeting, and analytical reports.
+          </p>
+
+          <ul class="project-tags">
+            <li>Python</li>
+            <li>Tkinter</li>
+            <li>SQLite</li>
+            <li>Desktop App</li>
+          </ul>
+
+          <div class="project-actions">
+            <a
+              href="https://github.com/aniketbiradar-official/expense-tracker-tkinter"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://github.com/aniketbiradar-official/expense-tracker-tkinter/releases/tag/v1.0.0"
+              target="_blank"
+              class="btn btn-outline"
+            >
+              Download .exe
+            </a>
+
+            <button
+              class="btn btn-primary"
+              data-project-btn="expense"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     PART 8 / 10 — CONTACT SECTION (CODEFATHER-INSPIRED)
+========================================================= -->
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <header class="section-header">
+      <h2>Contact</h2>
+      <p class="section-subtitle">
+        Let’s connect and talk about backend systems, not buzzwords.
+      </p>
+    </header>
+
+    <div class="contact-wrapper">
+
+      <!-- ================= CONTACT LEFT ================= -->
+      <div class="contact-left">
+
+        <h3>Get in touch</h3>
+
+        <p class="contact-description">
+          I’m actively looking for backend development internships and
+          entry-level software engineering roles.  
+          Open to collaboration, discussions, and learning opportunities.
+        </p>
+
+        <div class="contact-links">
+
+          <a
+            href="mailto:biradaraniket6@gmail.com"
+            class="contact-link"
+          >
+            <span class="label">Email</span>
+            <span class="value">biradaraniket6@gmail.com</span>
+          </a>
+
+          <a
+            href="https://github.com/aniketbiradar-official"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="label">GitHub</span>
+            <span class="value">aniketbiradar-official</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/aniket-biradar-a6b775371/"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="label">LinkedIn</span>
+            <span class="value">Aniket Biradar</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- ================= CONTACT RIGHT ================= -->
+      <div class="contact-right">
+
+        <div class="contact-card">
+          <h4>Currently</h4>
+          <p>
+            B.Sc. Computer Science (Semester 4)<br />
+            Backend-focused development
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h4>Availability</h4>
+          <p>
+            Open to internships, part-time roles,
+            and collaborative projects
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- =========================================================
+     PART 9 / 10 — FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+    <p class="footer-text">
+      © <span id="year"></span> Aniket Biradar.
+      Built with clean HTML, CSS, and JavaScript.
+    </p>
+
+    <p class="footer-subtext">
+      Backend-focused • System-oriented • Production mindset
+    </p>
+
+  </div>
+
+</footer>
+<!-- =========================================================
+     PART 10 / 10 — PROJECT MODAL + SCRIPTS + CLOSE
+========================================================= -->
+
+<!-- ================= PROJECT DETAILS MODAL ================= -->
+<div id="project-modal" class="project-modal" aria-hidden="true">
+
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-container" role="dialog" aria-modal="true">
+
+    <button class="modal-close" data-close aria-label="Close modal">
+      ✕
+    </button>
+
+    <h2 id="modal-title"></h2>
+    <p id="modal-description"></p>
+
+    <ul id="modal-tech" class="modal-tech-list"></ul>
+
+    <div id="modal-gallery" class="modal-gallery"></div>
+
+    <div id="modal-actions" class="modal-actions"></div>
+
+  </div>
+
+</div>
+
+<!-- ================= MAIN SCRIPT ================= -->
+<script src="script.js"></script>
+
+</main>
+</body>
+</html>
