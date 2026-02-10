@@ -792,3 +792,27 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("✔ Accessibility checks passed");
 
 });
+
+/* =========================================================
+   MOBILE NAV TOGGLE
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".primary-nav");
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+  });
+
+  // Close menu when clicking a link
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+    });
+  });
+
+});

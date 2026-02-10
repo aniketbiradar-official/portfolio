@@ -245,6 +245,20 @@ body.light .vertical-lines span {
   border-bottom: 1px solid var(--border-soft);
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
 body.light .site-header {
   background: rgba(255, 255, 255, 0.75);
 }
@@ -254,6 +268,7 @@ body.light .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative; 
 }
 
 /* =========================================================
@@ -1052,7 +1067,84 @@ body.light .toggle-ball .moon {
    MOBILE
 ========================================================= */
 
+
+
+/* =========================================================
+   MICRO POLISH
+========================================================= */
+
+::selection {
+  background: var(--accent-soft);
+}
+
+img {
+  display: block;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION — FINAL FIX
+========================================================= */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* anchor for dropdown */
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-main);
+}
+
 @media (max-width: 640px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 8px;
+    gap: 4px;
+    display: none;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft);
+    z-index: 999;
+  }
+
+  .primary-nav.open {
+    display: flex;
+  }
+
+  .primary-nav .nav-link {
+    margin-left: 0;        /* ❗ remove desktop margin */
+    padding: 8px 10px;     /* consistent click area */
+  }
 
   section {
     padding: 80px 0;
@@ -1061,13 +1153,6 @@ body.light .toggle-ball .moon {
   /* .primary-nav {
     display: none;
   } */
-
-.primary-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
 
   .hero-title {
     font-size: 2rem;
@@ -1087,16 +1172,4 @@ body.light .toggle-ball .moon {
     padding: 22px;
   }
 
-}
-
-/* =========================================================
-   MICRO POLISH
-========================================================= */
-
-::selection {
-  background: var(--accent-soft);
-}
-
-img {
-  display: block;
 }
