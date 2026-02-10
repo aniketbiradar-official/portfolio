@@ -1058,9 +1058,16 @@ body.light .toggle-ball .moon {
     padding: 80px 0;
   }
 
-  .primary-nav {
+  /* .primary-nav {
     display: none;
-  }
+  } */
+
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 
   .hero-title {
     font-size: 2rem;
