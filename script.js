@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(particleLayer);
   }
 
-  const SYMBOLS = ["</>", "{}", "=>", "const", "let", "class", "()", ";"];
+  const SYMBOLS = ["<Ani/>", "{Aniket}", "=>", "if-else", "for", "class", "(Biradar)", ";", ":"];
 
   const PARTICLE_COUNT = 28;
 
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     span.textContent = SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)];
     span.style.left = Math.random() * 100 + "vw";
     span.style.animationDuration = 14 + Math.random() * 18 + "s";
-    span.style.opacity = (Math.random() * 0.15 + 0.05).toFixed(2);
+    span.style.opacity = (Math.random() * 0.25 + 0.05).toFixed(2);
     particleLayer.appendChild(span);
   }
 
@@ -150,37 +150,39 @@ Available commands:
 
     whoami: {
       desc: "Who am I?",
-      run: () => "Aniket Biradar — Backend Developer"
+      run: () => "Aniket Biradar — Full-Stack Developer"
     },
 
     about: {
       desc: "About me",
       run: () =>
-        "Backend-focused developer building production-grade systems with Python, Java, and clean architecture."
+        "B.Sc. CS student and Full-Stack Developer specializing in Python, Java, and resilient system architecture."
     },
 
     skills: {
       desc: "Tech stack",
       run: () =>
-        "Python, Java, Django, Flask, SQL, MongoDB, Automation, Desktop Applications"
+        "Python, Java, Django, Flask, Tkinter, SQL, MongoDB, MySQL, SQLite"
     },
 
     projects: {
       desc: "List projects",
       run: () =>
-        "Image Scraper • Library Management System • Expense Tracker"
+        `1. Image Scraper – Automates bulk image retrieval and organized storage.
+2. Library System – Manages book records and user transactions.
+3. Expense Tracker – Tracks and categorizes spending for clear financial insights.`
     },
 
     resume: {
       desc: "Resume summary",
       run: () =>
-        "B.Sc. Computer Science — Backend Engineering Focus — CGPA 9.55 / 10"
+        "B.Sc. Computer Science — Full-Stack Development — CGPA 9.55 / 10"
     },
 
     contact: {
       desc: "Contact details",
       run: () =>
-        "Email: biradaraniket6@gmail.com | GitHub | LinkedIn"
+        "Email: biradaraniket6@gmail.com"
     },
 
     clear: {
@@ -281,7 +283,7 @@ Available commands:
   /* =========================================================
      INITIAL MESSAGE
   ========================================================= */
-  print("Welcome to Aniket's interactive terminal.");
+  print("Welcome to Aniket's personal terminal.");
   print("Type `help` to explore.");
 
 });
@@ -308,13 +310,20 @@ document.addEventListener("DOMContentLoaded", () => {
     scraper: {
       title: "Image Scraper & Dataset Generator",
       description:
-        "Production-grade image scraping system handling dynamic pages, pagination, retry logic, and checksum-based deduplication. Images are stored using MongoDB GridFS with searchable metadata.",
+        `This project is a production-style image scraping and dataset generation 
+        system built to reliably collect images from dynamic web pages. The application 
+        automates browser interactions to extract high-quality images, applies pagination 
+        and retry mechanisms to handle dynamic content and failures, and avoids duplicate 
+        data through checksum-based validation. Images are stored locally in a structured, 
+        topic-wise format and persisted in MongoDB Atlas using GridFS, along with searchable 
+        metadata. The system is designed with a modular architecture, robust logging, and 
+        reusable export scripts, making it suitable for scalable data collection and dataset 
+        creation workflows.`,
       tech: [
         "Python",
         "Selenium WebDriver",
         "Requests",
         "MongoDB GridFS",
-        "Automation",
         "Checksum Deduplication"
       ],
       images: [
@@ -332,7 +341,16 @@ document.addEventListener("DOMContentLoaded", () => {
     library: {
       title: "Library Management System",
       description:
-        "Full-stack Java MVC application with role-based access control, transactional issue/return workflows, and optimized relational database design.",
+        `A full-stack Library Management System designed and developed to manage book 
+        inventory, users, and borrowing workflows efficiently. The application follows MVC 
+        architecture and supports role-based access control for Admin, Librarian, and Member roles.
+        Key features include secure authentication, transactional book issue and return 
+        operations, server-side validation, dynamic search and filtering, and multiple 
+        analytical reports such as most borrowed books, overdue books, member activity, 
+        and monthly borrowing trends. The system uses a normalized relational database and 
+        optimized SQL queries to ensure data integrity, performance, and scalability.
+        The project demonstrates strong backend fundamentals, clean separation of concerns, 
+        and real-world system design practices suitable for production-grade applications.`,
       tech: [
         "Java",
         "JSP",
@@ -357,14 +375,23 @@ document.addEventListener("DOMContentLoaded", () => {
     expense: {
       title: "Personal Expense Tracker",
       description:
-        "Offline-first desktop application for expense tracking, budgeting, and analytical reporting. Packaged as a Windows installer for real-world usage.",
+        `Personal Expense Tracker is a Windows desktop application that enables users to 
+        manage daily expenses, track category-wise budgets, and analyze spending patterns 
+        through interactive monthly reports and charts. It features a clean, intuitive interface 
+        with reliable local data persistence using SQLite, requiring no internet connection or 
+        external services.
+        The system provides real-time budget monitoring, automatically updating spending and 
+        remaining balances after every transaction. Built using a layered MVC-inspired 
+        architecture, the application is packaged as a single-file executable and Windows 
+        installer, ensuring easy deployment and maintainability without requiring Python 
+        on the target system.`,
       tech: [
         "Python",
         "Tkinter",
         "SQLite",
         "Matplotlib",
-        "Desktop Application",
-        "Executable Packaging"
+        "PyInstaller",
+        "Inno Setup"
       ],
       images: [
         "assets/projects/expense_tracker_code1.png",
