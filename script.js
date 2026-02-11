@@ -310,15 +310,11 @@ document.addEventListener("DOMContentLoaded", () => {
     scraper: {
       title: "Image Scraper & Dataset Generator",
       description:
-        `This project is a production-style image scraping and dataset generation 
-        system built to reliably collect images from dynamic web pages. The application 
-        automates browser interactions to extract high-quality images, applies pagination 
-        and retry mechanisms to handle dynamic content and failures, and avoids duplicate 
-        data through checksum-based validation. Images are stored locally in a structured, 
-        topic-wise format and persisted in MongoDB Atlas using GridFS, along with searchable 
-        metadata. The system is designed with a modular architecture, robust logging, and 
-        reusable export scripts, making it suitable for scalable data collection and dataset 
-        creation workflows.`,
+        `Developed an automated image scraping pipeline using Python and Selenium to 
+        extract high-quality images from dynamic web pages. Implemented pagination, retry 
+        logic, and checksum-based deduplication to ensure reliable data collection. Images 
+        are stored in structured local folders and persisted in MongoDB Atlas using GridFS 
+        with searchable metadata, supporting scalable dataset generation.`,
       tech: [
         "Python",
         "Selenium WebDriver",
@@ -341,16 +337,11 @@ document.addEventListener("DOMContentLoaded", () => {
     library: {
       title: "Library Management System",
       description:
-        `A full-stack Library Management System designed and developed to manage book 
-        inventory, users, and borrowing workflows efficiently. The application follows MVC 
-        architecture and supports role-based access control for Admin, Librarian, and Member roles.
-        Key features include secure authentication, transactional book issue and return 
-        operations, server-side validation, dynamic search and filtering, and multiple 
-        analytical reports such as most borrowed books, overdue books, member activity, 
-        and monthly borrowing trends. The system uses a normalized relational database and 
-        optimized SQL queries to ensure data integrity, performance, and scalability.
-        The project demonstrates strong backend fundamentals, clean separation of concerns, 
-        and real-world system design practices suitable for production-grade applications.`,
+        `A full-stack web application built using Java, JSP, Servlets, and MySQL to manage 
+        books, users, and borrowing workflows. Designed with MVC architecture and role-based 
+        access control (Admin, Librarian, Member), the system supports secure authentication, 
+        transactional issue/return operations, search and filtering, and analytical reports 
+        with dashboards.`,
       tech: [
         "Java",
         "JSP",
@@ -362,7 +353,6 @@ document.addEventListener("DOMContentLoaded", () => {
       images: [
         "assets/projects/library_admin.png",
         "assets/projects/library_librarian.png",
-        "assets/projects/library_user.png"
       ],
       links: [
         {
@@ -375,16 +365,11 @@ document.addEventListener("DOMContentLoaded", () => {
     expense: {
       title: "Personal Expense Tracker",
       description:
-        `Personal Expense Tracker is a Windows desktop application that enables users to 
-        manage daily expenses, track category-wise budgets, and analyze spending patterns 
-        through interactive monthly reports and charts. It features a clean, intuitive interface 
-        with reliable local data persistence using SQLite, requiring no internet connection or 
-        external services.
-        The system provides real-time budget monitoring, automatically updating spending and 
-        remaining balances after every transaction. Built using a layered MVC-inspired 
-        architecture, the application is packaged as a single-file executable and Windows 
-        installer, ensuring easy deployment and maintainability without requiring Python 
-        on the target system.`,
+        `Personal Expense Tracker is a Windows desktop application for tracking daily 
+        expenses, managing category budgets, and analyzing spending with monthly summaries 
+        and charts. It uses SQLite for reliable local data storage and works offline.
+        Built with a layered MVC-inspired architecture, it is distributed as a standalone 
+        executable and installer, requiring no Python installation on the target system.`,
       tech: [
         "Python",
         "Tkinter",
